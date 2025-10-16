@@ -39,4 +39,10 @@ public class Fornecedor {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Fornecedor[" +
+                "id=" + id + ", nome='" + nome + ", cnpj='" + cnpj + ']';
+    }
 }
