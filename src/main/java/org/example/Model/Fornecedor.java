@@ -5,15 +5,23 @@ public class Fornecedor {
     private String nome;
     private String cnpj;
 
+    public Fornecedor(String nome, String cnpj) {
+        this.nome = nome;
+        this.cnpj = cnpj;
+    }
+
     public Fornecedor(int id, String nome, String cnpj) {
         this.id = id;
         this.nome = nome;
         this.cnpj = cnpj;
     }
 
-    public Fornecedor(String nome, String cnpj) {
-        this.nome = nome;
-        this.cnpj = cnpj;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -32,17 +40,9 @@ public class Fornecedor {
         this.cnpj = cnpj;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
-        return "Fornecedor[" +
-                "id=" + id + ", nome='" + nome + ", cnpj='" + cnpj + ']';
+        return "ID: " + id + ", Nome: " + nome + ", CNPJ: " + cnpj;
     }
+
 }

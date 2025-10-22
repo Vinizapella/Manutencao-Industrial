@@ -3,47 +3,19 @@ package org.example.Model;
 import java.time.LocalDate;
 
 public class NotaEntrada {
-
-    private int id;
     private int idFornecedor;
     private LocalDate dataEntrada;
 
-    public NotaEntrada(int id, int idFornecedor, LocalDate dataEntrada) {
-        this.id = id;
+    public NotaEntrada(int idFornecedor, LocalDate dataEntrada) {
         this.idFornecedor = idFornecedor;
         this.dataEntrada = dataEntrada;
-    }
-
-    public NotaEntrada(LocalDate dataEntrada) {
-        this.dataEntrada = dataEntrada;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getIdFornecedor() {
         return idFornecedor;
     }
 
-    public void setIdFornecedor(int idFornecedor) {
-        this.idFornecedor = idFornecedor;
-    }
-
     public LocalDate getDataEntrada() {
         return dataEntrada;
-    }
-
-    public void setDataEntrada(LocalDate dataEntrada) {
-        this.dataEntrada = dataEntrada;
-    }
-
-    @Override
-    public String toString() {
-        return "NotaEntrada[" + "id=" + id + ", idFornecedor=" + idFornecedor + ", dataEntrada=" + dataEntrada + ']';
     }
 }

@@ -1,19 +1,19 @@
 package org.example.Model;
 
-public class Materiais {
+public class Material {
     private int id;
     private String nome;
     private String unidade;
     private double estoque;
 
-    public Materiais(int id, String nome, String unidade, double estoque) {
-        this.id = id;
+    public Material(String nome, String unidade, double estoque) {
         this.nome = nome;
         this.unidade = unidade;
         this.estoque = estoque;
     }
 
-    public Materiais(String nome, String unidade, double estoque) {
+    public Material(int id, String nome, String unidade, double estoque) {
+        this.id = id;
         this.nome = nome;
         this.unidade = unidade;
         this.estoque = estoque;
@@ -53,6 +53,7 @@ public class Materiais {
 
     @Override
     public String toString() {
-        return "Materiais[" + "id=" + id + ", nome='" + nome + ", unidade='" + unidade + ", estoque=" + estoque + "]";
+        return "ID: " + id + ", Nome: " + nome + ", Estoque: " + estoque + " " + unidade;
     }
+
 }

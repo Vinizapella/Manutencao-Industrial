@@ -3,20 +3,19 @@ package org.example.Model;
 import java.time.LocalDate;
 
 public class Requisicao {
-
     private int id;
     private String setor;
     private LocalDate dataSolicitacao;
     private String status;
 
-    public Requisicao(int id, String setor, LocalDate dataSolicitacao, String status) {
-        this.id = id;
+    public Requisicao(String setor, LocalDate dataSolicitacao, String status) {
         this.setor = setor;
         this.dataSolicitacao = dataSolicitacao;
         this.status = status;
     }
 
-    public Requisicao(String setor, LocalDate dataSolicitacao, String status) {
+    public Requisicao(int id, String setor, LocalDate dataSolicitacao, String status) {
+        this.id = id;
         this.setor = setor;
         this.dataSolicitacao = dataSolicitacao;
         this.status = status;
@@ -42,8 +41,8 @@ public class Requisicao {
         return dataSolicitacao;
     }
 
-    public void setDataSolicitacao(LocalDate dataSolicitacao) {
-        this.dataSolicitacao = dataSolicitacao;
+    public void setDataSolicitacao(LocalDate data) {
+        this.dataSolicitacao = data;
     }
 
     public String getStatus() {
@@ -56,6 +55,7 @@ public class Requisicao {
 
     @Override
     public String toString() {
-        return "Requisicao[" + "id=" + id + ", setor='" + setor + ", dataSolicitacao=" + dataSolicitacao + ", status='" + status + ']';
+        return "ID: " + id + ", Setor: " + setor + ", Data: " + dataSolicitacao + ", Status: " + status;
     }
+
 }
